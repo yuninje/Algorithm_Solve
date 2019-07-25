@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/14499
 def left_move(cube):
     temp = cube[3][1]
     cube[3][1] = cube[1][2]

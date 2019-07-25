@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/14500
 import copy
 def dfs( boolList, r, c, total, count):
     global answer

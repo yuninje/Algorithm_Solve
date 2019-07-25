@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/13460
 import copy
 def dfs(arr, red, blue, goal, count):
     global red_goal

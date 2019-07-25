@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/1010
 T = int(input())
 
 for test in range(0,T):

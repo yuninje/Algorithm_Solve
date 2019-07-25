@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/2156
 N  = int(input())
 
 grape = [0]

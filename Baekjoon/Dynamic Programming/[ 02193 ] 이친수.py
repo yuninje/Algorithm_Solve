@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/2193
 N = int(input())
 d = []
 d.append(0)

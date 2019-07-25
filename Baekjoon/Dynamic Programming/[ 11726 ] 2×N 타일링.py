@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/11726
 N = int(input())
 
 dp = []

@@ -1,3 +1,4 @@
+#https://www.acmicpc.net/problem/12100
 import copy
 def dfs(arr, count):
     if count == 5:

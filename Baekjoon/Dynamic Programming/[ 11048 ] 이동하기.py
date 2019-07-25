@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/11048
 N, M = list(map(int, input().split()))
 
 arr = [[0 for _ in range(0,M+1)]]

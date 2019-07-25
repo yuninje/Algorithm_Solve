@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/11055
 N = int(input())
 
 arr = [0] + list(map(int, input().split()))

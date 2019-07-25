@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/11051
 N, K = list(map(int, input().split()))
 
 dp = [[0 for _ in range(0,K+1)] for __ in range(0,N+1)]

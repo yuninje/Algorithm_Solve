@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/1149
 def solution(rgb):
 
     return

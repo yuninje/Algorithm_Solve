@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/1003
 def addList(a, b):
     list_ = []
     list_.append(a[0]+b[0])

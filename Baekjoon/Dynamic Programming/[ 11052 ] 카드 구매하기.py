@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/11052
 # 카드 1개, 두개, ... N개   >> 총 N가지
 # 
 

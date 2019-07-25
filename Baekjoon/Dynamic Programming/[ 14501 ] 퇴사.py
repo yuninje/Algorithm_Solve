@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/14501
 N = int(input())
 
 arr = [[0,0]]
@@ -19,6 +20,4 @@ for i in range(1,N+1):
     
     if max < dp[i][1]:
         max = dp[i][1]
-
-
 print(max)

@@ -1,7 +1,11 @@
 # https://www.acmicpc.net/problem/14500
 import copy
+
 def dfs( boolList, r, c, total, count):
     global answer
+
+    if boolList[r][c]:
+        return
     boolList[r][c] = True
     total += arr[r][c]
     if count == 3:
@@ -9,14 +13,19 @@ def dfs( boolList, r, c, total, count):
             answer = total
         return
     
-    if not boolList[r+1][c]:
-        dfs(copy.deepcopy(boolList),r+1, c, total + arr[r+1][c].decode, count+1)
-    if not boolList[r-1][c]:  
-        dfs(copy.deepcopy(boolList), r-1, c, total + arr[r-1][c], count+1)
-    if not boolList[r][c+1]:  
-        dfs(copy.deepcopy(boolList), r, c+1, total + arr[r][c+1], count+1)
-    if not boolList[r][c-1]:  
-        dfs(copy.deepcopy(boolList), r, c-1, total + arr[r][c-1], count+1)
+
+    if count == 2 and boolList[r-1][c] and boolList[r-2][c] and r-2>0:
+        dfs(copy.deepcopy(boolList),r-1, c+1, total , count+1)
+        dfs(copy.deepcopy(boolList),r-1, c-1, total , count+1)
+
+    if count == 2 and boolList[r][c-1] and boolList[r][c-2] and c-2 >0:
+        dfs(copy.deepcopy(boolList),r+1, c-1, total , count+1)
+        dfs(copy.deepcopy(boolList),r-1, c-1, total , count+1)
+
+    dfs(copy.deepcopy(boolList),r+1, c, total , count+1)
+    #dfs(copy.deepcopy(boolList), r-1, c, total, count+1)
+    dfs(copy.deepcopy(boolList), r, c+1, total, count+1)
+    dfs(copy.deepcopy(boolList), r, c-1, total, count+1)
 
 
 # 4 <= N, M <= 500
@@ -40,9 +49,5 @@ for i in range(0,M+2):
 answer = 0
 for r in range(1,N+1):
     for c in range(1,M+1):
-        dfs(boolList, r, c, arr[r][c], 0)
-
+        dfs(copy.deepcopy(boolList), r, c, 0, 0)
 print(answer)
-
-
-

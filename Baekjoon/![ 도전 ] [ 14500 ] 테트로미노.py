@@ -12,20 +12,20 @@ def dfs( boolList, r, c, total, count):
         if answer < total:
             answer = total
         return
-    
 
-    if count == 2 and boolList[r-1][c] and boolList[r-2][c] and r-2>0:
+    if boolList[r-1][c] and boolList[r-2][c] and r-2>0:
         dfs(copy.deepcopy(boolList),r-1, c+1, total , count+1)
         dfs(copy.deepcopy(boolList),r-1, c-1, total , count+1)
 
-    if count == 2 and boolList[r][c-1] and boolList[r][c-2] and c-2 >0:
+    if boolList[r][c-1] and boolList[r][c-2] and c-2 >0:
         dfs(copy.deepcopy(boolList),r+1, c-1, total , count+1)
         dfs(copy.deepcopy(boolList),r-1, c-1, total , count+1)
 
     dfs(copy.deepcopy(boolList),r+1, c, total , count+1)
-    #dfs(copy.deepcopy(boolList), r-1, c, total, count+1)
     dfs(copy.deepcopy(boolList), r, c+1, total, count+1)
     dfs(copy.deepcopy(boolList), r, c-1, total, count+1)
+
+
 
 
 # 4 <= N, M <= 500
@@ -50,4 +50,5 @@ answer = 0
 for r in range(1,N+1):
     for c in range(1,M+1):
         dfs(copy.deepcopy(boolList), r, c, 0, 0)
+        
 print(answer)

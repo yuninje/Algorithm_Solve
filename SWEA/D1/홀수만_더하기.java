@@ -1,3 +1,4 @@
+// https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5QSEhaA5sDFAUq
 import java.util.Scanner;
 class Solution{
  	public static void main(String[] args){

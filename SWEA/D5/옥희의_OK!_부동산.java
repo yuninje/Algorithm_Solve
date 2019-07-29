@@ -1,3 +1,4 @@
+// https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWslJ57qFS0DFASy
 import java.util.Scanner;
 import java.io.FileInputStream;
 class Solution

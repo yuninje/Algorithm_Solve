@@ -1,3 +1,4 @@
+# https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWBOKg-a6l0DFAWr
 def solution(now):
     global list_
     global arr

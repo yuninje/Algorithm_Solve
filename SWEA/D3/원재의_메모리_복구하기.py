@@ -1,3 +1,4 @@
+# https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV19AcoKI9sCFAZN
 def solution(a):
     start_1 = len(a)
     for i in range(0, len(a)):

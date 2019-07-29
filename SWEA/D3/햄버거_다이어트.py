@@ -1,3 +1,4 @@
+# https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AWT-lPB6dHUDFAVT
 def solution(bool_list, total_k, total_t, now):
     global answer
     flag = False

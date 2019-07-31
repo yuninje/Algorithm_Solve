@@ -14,7 +14,7 @@ def dfs(arr, red, blue, goal, count):
         red_ = copy.deepcopy(red)
         blue_ = copy.deepcopy(blue)
         move(arr_, red_, blue_, d)
-        if same(arr_, arr):
+        if same(arr_, arr):     
             continue
         if red_goal and not blue_goal:
             if answer > count+1:
@@ -31,10 +31,12 @@ def same(arr, arr_):
                 return False
     return True
 
-def move(arr, red, blue, d): # 방향  0 : 아래    1 : 위   2 : 오른쪽  3: 왼쪽
-    # red move
+def move(arr, red, blue, d): # 방향  0 : 남 , 1 : 북 , 2 : 동 , 3: 서
+    # 기울였을 때 RED 와 BLUE 의 이동
+
     global red_goal
     global blue_goal
+    # red move
     while arr[red[0]+d[0]][red[1]+d[1]] == 'O' or arr[red[0]+d[0]][red[1]+d[1]] == '.':
         arr[red[0]][red[1]] = '.'
         red[0] += d[0]
@@ -74,7 +76,7 @@ def move(arr, red, blue, d): # 방향  0 : 아래    1 : 위   2 : 오른쪽  3:
 N, M = list(map(int, input().split()))
 
 dir = [[1,0],[-1,0],[0,1],[0,-1]]
-        # 아래  위에  오른쪽 왼쪽
+        #남     북    동     서
 
 arr = [[0 for _ in range(0,M)] for __ in range(0,N)]
 red = []
@@ -96,6 +98,7 @@ red_goal = False
 blue_goal = False
 answer = 11
 dfs(arr, red, blue, goal, 0)
+
 if answer == 11:
     print(-1)
 else :

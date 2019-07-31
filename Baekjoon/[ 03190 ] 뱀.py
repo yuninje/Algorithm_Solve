@@ -55,13 +55,12 @@ boolList[1][1] = True
 
 head = [1,1]
 tail = [1,1]
-print("=============================time : " + str(time))
-for a in arr:
-    print(a)
 
 dirList = [[-1,-1, 0]]
 while True:
-    print("time : " + str(time))
+    print("=============================start time : " + str(time))
+    for a in arr:
+        print(a) 
     print("now head : " + str(head[0]) + ","+str(head[1]))
     print("now tail : " + str(tail[0]) + ","+str(tail[1]))
     head[0] += dir[dirIndex][0]
@@ -86,9 +85,7 @@ while True:
         tail[0] += dir[dirList[0][2]][0]
         tail[1] += dir[dirList[0][2]][1]
     time += 1
-    print("=============================time : " + str(time))
-    for a in arr:
-        print(a) 
+    
     if time ==  CX[orderCount][0]:
         dirIndex += CX[orderCount][1]
         dirIndex %= 4

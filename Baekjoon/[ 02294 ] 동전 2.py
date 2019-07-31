@@ -18,15 +18,8 @@ for i in range(1,K+1):
 
     if dp[i] == 0:
         dp[i] = -1
-
-
     
-# print(dp[K])
-
-
-for d in dp:
-    print(d)
-    
+print(dp[K])
     
         
         

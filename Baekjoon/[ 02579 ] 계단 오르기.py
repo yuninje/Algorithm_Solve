@@ -1,3 +1,5 @@
+# https://www.acmicpc.net/problem/2579
+
 N = int(input())
 stair = [0]
 for _ in range(0,N):

@@ -29,5 +29,3 @@ for test in range(1,T+1):
                     bool_arr[dum[-1]] = True
             
     print(answer)
-            
-    

@@ -3,6 +3,9 @@
 ``` python
     import sys
     sys.setrecursionlimit(10**6)    # Maximum Recursion Dept Exceed
+    
+    I = sys.stdin.readline
+    A = I()
 
     A = input()              # Memory Save 
     A = sys.stdin.readline() # Time Save

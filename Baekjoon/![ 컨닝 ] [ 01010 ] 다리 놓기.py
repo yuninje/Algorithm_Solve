@@ -1,4 +1,3 @@
-# https://www.acmicpc.net/problem/1010
 T = int(input())
 
 for test in range(0,T):
@@ -9,7 +8,6 @@ for test in range(0,T):
         result *= i
     
     for i in range(1,N+1):
-        result /= i
+        result //= i
 
-
-    print(int(result))
+    print(result)

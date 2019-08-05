@@ -12,4 +12,13 @@
 
     A = [[0 for _ in range(0,N)] for __ in range(0,N)]  # X
     A = [[0] * N for _ in range(0,N)]                   # O
+
+
+
+    print(" ".join(map(str, line)))                     # O
+
+    for a in line:
+        print(a, end=' ')                               # X
+    print()
+
 ```

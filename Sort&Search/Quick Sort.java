@@ -13,9 +13,7 @@ class QuickSort{
         }
         int pivot = start;
         int l_idx = start +1;
-        boolean lFlag = false;
         int r_idx = end-1;
-        boolean rFlag = false;
 
         while(true){
             if(!lFlag){

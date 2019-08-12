@@ -1,8 +1,8 @@
 # https://www.acmicpc.net/problem/9205
+import sys
+I = sys.stdin.readline
 def dfs(nowR, nowC):
     global happyFlag
-    global visit
-    # print("nowR : " + str(nowR) + "  nowC : " + str(nowC))
     if happyFlag:
         return
     if abs(nowR -rock[0]) + abs(nowC-rock[1]) <= 1000:
@@ -14,14 +14,14 @@ def dfs(nowR, nowC):
             dfs(deList[d][0], deList[d][1])
 
 
-test = int(input())
+test = int(I())
 for t in range(0,test):
-    de = int(input())
-    home = list(map(int,input().split()))
+    de = int(I())
+    home = list(map(int,I().split()))
     deList = []
     for d in range(0,de):
-        deList.append(list(map(int,input().split())))
-    rock = list(map(int,input().split()))
+        deList.append(list(map(int,I().split())))
+    rock = list(map(int,I().split()))
 
     visit = [False] * de
     happyFlag = False

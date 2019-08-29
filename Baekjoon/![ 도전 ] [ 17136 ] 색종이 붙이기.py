@@ -1,4 +1,4 @@
-# https://www.acmicpc.net/submit/17135
+# https://www.acmicpc.net/problem/17136
 # 10 * 10
 
 def check(r_,c_):

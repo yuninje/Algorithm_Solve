@@ -1,5 +1,5 @@
+# https://www.acmicpc.net/problem/1520
 import sys
-
 sys.setrecursionlimit(10**6)
 I = sys.stdin.readline
 def dfs(r,c):

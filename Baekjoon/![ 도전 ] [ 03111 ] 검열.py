@@ -27,6 +27,7 @@ while start < end :
                     break
             else:
                 start = i + len(word)
+                for 
                 before += arr[:i]
                 break
             if endFlag:

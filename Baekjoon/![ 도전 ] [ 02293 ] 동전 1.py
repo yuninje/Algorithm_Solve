@@ -2,21 +2,23 @@
 # 1 <= N <= 100
 # 1 <= K <= 10,000
 # 1 <= COIN(n) <= 100,000
-import sys
-sys.setrecursionlimit(10**6)
 
 N, K = list(map(int, input().split()))
-coins = [0]
-for n in range(0,N):
-    coins.append(int(input()))
+coins = [int(input()) for _ in range(N)]
 
-dp = [[0] *(K+1) for _ in range(0,N+1)]
+dp = [[0] * (K+1) for _ in range(K+1)]
+for a in coins:
+    dp[1][a] = 1
 
-# for r in range (1, N+1):
-#     dp[r][0] = 1
-#     for c in range(1,K+1):
-#         dp[r][c] = dp[r][c-coins[r]] + dp[r-1][c]
+for n in range(1,K):
+    for v in range(K):
+        if dp[n][v] != 0:
+            for c in coins:
+                if v+c <= K:
+                    dp[n+1][v+c] += dp[n][v]
+
+
+
+
 for d in dp:
     print(d)
-
-print(dp[N][K])

@@ -9,14 +9,16 @@ import sys
 I = sys.stdin.readline
 N = int(I())
 arr = list(map(int, I().split()))
+arr.insert(0,999999999)
+result = [-1] * (N+1)
+stack = [0]
 
-result = ['0']
-for a in range(1,N):
-    for b in range(a-1, -1, -1):
-        if arr[a] < arr[b]:
-            result.append(str(b+1))
-            break
-    else:
-        result.append('0')
+for a in range(1,N+1):
+    while arr[stack[-1]] <= arr[a]:
+        stack.pop()      
+    
+    result[a] = stack[-1]
+    stack.append(a)
 
-print(' '.join(result))
+del result[0]
+print(' '.join(map(str,result)))

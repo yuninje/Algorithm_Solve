@@ -33,8 +33,8 @@ for a, b in arr:
     adj[a][b] = 1
     adj[b][a] = 1
 
-# for a in adj:
-#     print(a)
+for a in adj:
+    print(a)
 
 answer = 999999999
 answer_idx = -1
@@ -42,7 +42,7 @@ for start in range(1,N+1):
     visit = [False] * (N+1)
     visit[start] = True
     result = bfs(start)
-    # print('start : ' + str(start) + '  result : ' + str(result))
+    print('start : ' + str(start) + '  result : ' + str(result))
     if answer > result:
         answer_idx = start
         answer = result

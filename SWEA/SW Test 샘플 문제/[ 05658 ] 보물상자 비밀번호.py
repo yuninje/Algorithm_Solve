@@ -33,7 +33,7 @@ for test in range(1,T+1):
     num = list(map(lambda x : int(x,16), num))
 
     num = sorted(num, reverse=True)
-    print(num)
+    # print(num)
     before = num[0]
     idx = 2
     if K==1:

@@ -33,6 +33,14 @@
         print(a, end=' ')                               # X
     print()
 
+    # priority queue
+    from queue import PriorityQueue
+    que = PriorityQueue()               # 무한대의 우선순위 큐
+    que = PriorityQueue(maxsize = 8)    # 최대 크기를 가진 우선순위 큐
+    que.put(3)                          # 큐에 추가
+    que.get()                           # poll
+    
+
 ```
 
 ### Big-O [Link](https://cjh5414.github.io/big-o-notation/)

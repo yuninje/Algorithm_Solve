@@ -1,4 +1,4 @@
-# https://www.acmicpc.net/problem/15961
+# https://www.acmicpc.net/problem/2531
 # 접시수, 초밥의 가짓수, 연속 접시수, 쿠폰번호
 import sys
 I = sys.stdin.readline

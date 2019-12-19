@@ -250,7 +250,9 @@
         for n in range(N):
             if visit[n]:
                 continue
+            visit[n] = True
             result[count] = n
+            visit[n] = False
             permutation(count+1)
 
     result = [0] * N

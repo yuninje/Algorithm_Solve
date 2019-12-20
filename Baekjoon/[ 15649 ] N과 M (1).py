@@ -1,3 +1,4 @@
+# https://www.acmicpc.net/problem/15649
 def fun(count):
     if count == M:
         print(' '.join(list(map(str, arr))))

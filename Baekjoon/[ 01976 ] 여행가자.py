@@ -1,11 +1,11 @@
 # https://www.acmicpc.net/problem/1976
 
-def dfs(n, idx):
+def dfs(n):
+    group[n] = 0
     for a in adj[n]:
         if group[a] != -1:
             continue
-        group[a] = idx
-        dfs(a, idx)
+        dfs(a)
 
 N = int(input())
 M = int(input())
@@ -18,17 +18,12 @@ for i in range(N):
             adj[i].append(j)
 
 group = [-1] * N
-idx = 0
 
-for n in range(N):
-    if group[n] == -1:
-        dfs(n, idx)
-        idx += 1
+dfs(plan[0])
 
-for i in range(M-1):
-    if group[plan[i]] != group[plan[i+1]]:
+for p in plan:
+    if group[p] == -1:
         print('NO')
         break
 else:
     print('YES')
-

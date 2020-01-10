@@ -6,51 +6,14 @@ import sys
 sys.setrecursionlimit(10**6)
 I = sys.stdin.readline
 
-def dfs(now, flag):
-    global answerFlag
-    arr[now] = flag
-    for a in inner[now]:
-        if arr[a] == 0:
-            dfs(a, -flag)
-        elif arr[a] == flag:
-            answerFlag = True
-        if answerFlag:
-            return
-
-def bfs(now):
-    global noFlag
-    arr[now] = 1
-    queue = [now]
-    while queue:
-        queue_ = []
-        for q in queue:
-            flag = arr[q]
-            for i in inner[q]:
-                if arr[i] == flag:
-                    noFlag = True
-                    return
-                elif arr[i] == 0:
-                    arr[i] = -flag
-                    queue_.append(i)
-                
-        queue = queue_
-        
 T = int(input())
-for test in range(1,T+1):
-    V , E = list(map(int, input().split()))
+answers = [0] * T
+for test in range(T):
+    V , E = list(map(int, I().strip().split()))
     inner = [[] for _ in range(0,V+1)]
     for _ in range(0,E):
-        a, b=list(map(int, input().split()))
-        inner[a].append(b)
-        inner[b].append(a)
-    noFlag = False
-    arr = [0] * (V+1)
-    for i in range(1,V+1):
-        if arr[i] == 0:
-            bfs(i)
-        if noFlag:
-            break
-    if noFlag:
-        print('No')
-    else:
-        print('Yes')
+        a, b=list(map(int, I().strip().split()))
+    
+
+for a in answers:
+    print(a)
